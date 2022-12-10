@@ -8,25 +8,20 @@ def printReg(d, X):
         print()
 
 with open("input.txt", "r") as file:
-    lines = [line.rstrip() for line in file]
+    X = 1
+    cycles = 1
 
-X = 1
-cycles = 1
-
-i = 0
-while True:
-    if i == len(lines):
-        break
-    line = lines[i].split()
-    inst = line[0]
-    if inst == "addx":
-        val = int(line[1])
-        printReg(cycles, X)
-        cycles += 1
-        printReg(cycles, X)
-        cycles += 1
-        X += val
-    else:
-        printReg(cycles, X)
-        cycles += 1
-    i +=1
+    for line in file:
+        line = line.strip()
+        line = line.split()
+        inst = line[0]
+        if inst == "addx":
+            val = int(line[1])
+            printReg(cycles, X)
+            cycles += 1
+            printReg(cycles, X)
+            cycles += 1
+            X += val
+        else:
+            printReg(cycles, X)
+            cycles += 1

@@ -2,6 +2,7 @@
     "cSpell.words": [
         "Bifunctor",
         "bimap",
+        "foldl",
         "uncurry"
     ]
 }

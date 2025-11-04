@@ -3,6 +3,7 @@
         "Bifunctor",
         "bimap",
         "foldl",
+        "foldr",
         "uncurry"
     ]
 }
